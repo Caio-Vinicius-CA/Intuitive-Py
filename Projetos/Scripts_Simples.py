@@ -85,13 +85,13 @@ for n in novos_produtos:
     print(n)
 
 # Lista ordenada por nome decrescente
-produtos_ordenados_por_nome = sorted(novos_produtos, key=lambda x: x["nome"], reverse=True)
+produtos_ordenados_por_nome = sorted(copy.deepcopy(novos_produtos), key=lambda x: x["nome"], reverse=True)
 print(f"\nNova lista ordenada por nome")
 for produto in produtos_ordenados_por_nome:
     print(produto)
 
 # Lista ordenada por preço crescente
-produtos_ordenados_por_preco = sorted(novos_produtos, key=lambda x: x["preco"])
+produtos_ordenados_por_preco = sorted(copy.deepcopy(novos_produtos), key=lambda x: x["preco"])
 print(f"\nNova lista ordenada por preço")
 for produto in produtos_ordenados_por_preco:
     print(produto)
